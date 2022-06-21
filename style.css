@@ -70,12 +70,12 @@ h1 {
   border-radius: 5px;
   font-size: 1.5rem;
   min-width: 24rem;
-  white-space: nowrap;
   text-align: center;
 }
 
 /*Nav*/
 
+/*
 #nav-header {
   grid-column: 1 / span 2;
   grid-row: 2;
@@ -140,6 +140,61 @@ h1 {
 .contact-header a:hover {
   color: #ffe3e0;
 }
+*/
+
+/* [ON BIG SCREEN] */
+/* (A) WRAPPER */
+#hamnav {
+  width: 100%;
+  background: hsla(263, 6%, 43%, 1);
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+/* (B) HORIZONTAL MENU ITEMS */
+#hamitems {
+  display: flex;
+}
+#hamitems a {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 10px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+}
+
+#hamitems a:hover {
+  color: hsla(7, 89%, 86%, 1);
+}
+
+#hamitems a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: hsla(7, 89%, 86%, 1);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+#hamitems a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* (C) HIDE HAMBURGER */
+#hamnav label,
+#hamburger {
+  display: none;
+}
 
 /*Main*/
 
@@ -148,47 +203,168 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: flex-start;
-  width: 90%;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 1.5rem;
-  margin: 0 auto;
+  align-items: center;
+  width: 90vw;
 }
 
 section {
-  flex-basis: 800px;
-  min-height: 37.5rem;
   border-radius: 1.5rem;
   color: white;
   background: hsla(263, 6%, 43%, 0.7);
   box-shadow: hsla(0, 0%, 0%, 0.8) 10px 10px 80px;
-  margin: 1.5rem;
+  margin: 1.5rem 2vw;
   padding: 1.5rem;
+  flex-grow: 1;
+  flex-basis: 550px;
+  min-width: 240px;
+  max-width: 1000px;
+  min-height: 900px;
   display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 section h2 {
   font-size: 2rem;
+  text-shadow: 2px 2px 10px #444;
 }
 
 section p {
-  margin: 5px 10px;
+  margin: 10px auto;
   font-size: 1.25rem;
 }
 
-.figure-section {
-  align-self: center;
-  display: flex;
-  flex-flow: row wrap;
+section img {
+  border-radius: 1.5rem;
+  width: 100%;
 }
 
 .figure-section figcaption {
-  margin: 0 15px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+#about {
+  justify-content: space-between;
+}
+
+#services {
+  justify-content: space-between;
+}
+
+#services ul {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+#services a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+#services a:hover {
+  color: hsla(7, 89%, 86%, 1);
+}
+
+#prices {
+  justify-content: space-between;
+}
+
+#prices ul {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+#prices ul li {
+  list-style: none;
+  font-size: 1.25rem;
+}
+
+#contactus {
+  justify-content: space-between;
+}
+
+#contactus img {
+  margin: 5px;
+}
+
+#contactus ul {
+  height: 100%;
+  flex-grow: 1;
+  align-self: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+#contactus ul li {
+  list-style: none;
+  font-size: 1.25rem;
+}
+
+#contactus h3 {
+  font-size: 1.25rem;
+  text-shadow: 2px 2px 10px #444;
+}
+
+#contactus p {
+  text-indent: 2rem;
+}
+
+.contactlink {
+  margin: 5px;
+  padding: 5px;
+  background: hsla(263, 6%, 43%, 1);
+  border-radius: 5px;
+  text-shadow: 2px 2px 10px #444;
+}
+
+#contactus a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+#contactus a:hover {
+  color: hsla(7, 89%, 86%, 1);
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px) {
+  /* (A) BREAK INTO VERTICAL MENU */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+
+  /* (B) SHOW HAMBURGER ICON */
+  #hamnav label {
+    display: inline-block;
+    color: white;
+    background: hsla(263, 6%, 43%, 1);
+    font-style: normal;
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  /* (C) TOGGLE SHOW/HIDE MENU */
+  #hamitems {
+    display: none;
+  }
+  #hamnav input:checked ~ #hamitems {
+    display: block;
+  }
+
+  #quote-header {
+    display: none;
+  }
 }
