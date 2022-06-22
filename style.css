@@ -33,10 +33,11 @@ header {
   width: 100%;
   height: 14rem;
   display: grid;
-  grid-template-columns: 300px auto;
-  grid-template-rows: 180px auto;
+  grid-template-columns: 18.75rem auto;
+  grid-template-rows: 11.25rem auto;
   position: sticky;
-  top: -184px;
+  top: -11.5rem;
+  z-index: 100;
 }
 
 h1 {
@@ -149,6 +150,7 @@ h1 {
   background: hsla(263, 6%, 43%, 1);
   grid-column: 1 / span 2;
   grid-row: 2;
+  z-index: 10;
 }
 
 /* (B) HORIZONTAL MENU ITEMS */
@@ -205,6 +207,7 @@ main {
   justify-content: space-around;
   align-items: center;
   width: 90vw;
+  z-index: 10;
 }
 
 section {
@@ -222,6 +225,11 @@ section {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  transition: transform 0.2s;
+}
+
+section:hover {
+  transform: scale(1.02);
 }
 
 section h2 {
@@ -254,20 +262,92 @@ section img {
 
 #services ul {
   height: 100%;
+  width: 100%;
   flex-grow: 1;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
 }
 
+#services ul li {
+  list-style: none;
+  flex-grow: 1;
+}
+
 #services a {
   text-decoration: none;
   color: white;
+  background: hsla(263, 6%, 43%, 1);
   font-size: 1.5rem;
+  margin: 0;
+  padding: 5px;
 }
 
 #services a:hover {
   color: hsla(7, 89%, 86%, 1);
+}
+
+#acu {
+  background: url('./images/acupuncture.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#hand {
+  background: url('./images/handtherapy.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#musc {
+  background: url('./images/muscoskeletal.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#ortho {
+  background: url('./images/orho.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pt {
+  background: url('./images/pt.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pod {
+  background: url('./images/resp.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#surgery {
+  background: url('./images/surgery.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#injury {
+  background: url('./images/knee.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#smassage {
+  background: url('./images/neuro.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #prices {
@@ -291,8 +371,15 @@ section img {
   justify-content: space-between;
 }
 
+/*
 #contactus img {
   margin: 5px;
+}
+*/
+
+#contactus iframe {
+  border-radius: 1.5rem;
+  width: 100%;
 }
 
 #contactus ul {
@@ -334,6 +421,35 @@ section img {
 
 #contactus a:hover {
   color: hsla(7, 89%, 86%, 1);
+}
+
+#team {
+  flex-basis: 800px;
+  max-width: 100%;
+}
+
+#team-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+#team-container .profile {
+  margin: 10px;
+}
+
+#team h3 {
+  text-shadow: 2px 2px 10px #444;
+}
+
+#team img,
+#team p {
+  max-width: 350px;
+}
+
+#team p {
+  font-size: 1rem;
 }
 
 footer {

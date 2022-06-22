@@ -51,6 +51,7 @@
           <a href="#services">Our Services</a>
           <a href="#prices">Prices</a>
           <a href="#contactus">Contact Us</a>
+          <a href="#team">Team</a>
         </div>
       </nav>
     </header>
@@ -83,17 +84,17 @@
       <section id="services">
         <h2>Our Services</h2>
         <ul>
-          <li><a href="#">Acupuncture</a></li>
-          <li><a href="#">Hand therapy</a></li>
-          <li><a href="#">Muscoloskeletal</a></li>
-          <li><a href="#">Neurological</a></li>
-          <li><a href="#">Orthopaedics</a></li>
-          <li><a href="#">Personal Training and Exercise Therapy</a></li>
-          <li><a href="#">Podiatry and Chiropody</a></li>
-          <li><a href="#">Post Surgery Rehab</a></li>
-          <li><a href="#">Respiratory</a></li>
-          <li><a href="#">Sports injury</a></li>
-          <li><a href="#">Sports Massage</a></li>
+          <li id="acu"><a href="#">Acupuncture</a></li>
+          <li id="hand"><a href="#">Hand therapy</a></li>
+          <li id="musc"><a href="#">Muscoloskeletal</a></li>
+          <li id="ortho"><a href="#">Orthopaedics</a></li>
+          <li id="pt">
+            <a href="#">Personal Training and Exercise Therapy</a>
+          </li>
+          <li id="pod"><a href="#">Podiatry and Chiropody</a></li>
+          <li id="surgery"><a href="#">Post Surgery Rehab</a></li>
+          <li id="injury"><a href="#">Sports injury</a></li>
+          <li id="smassage"><a href="#">Sports Massage</a></li>
         </ul>
       </section>
       <section id="prices">
@@ -117,10 +118,21 @@
       </section>
       <section id="contactus">
         <h2>Contact Us</h2>
+        <!--
         <img
           src="./images/Bristol-City-Centre-Map-preview.png"
           alt="Street Map"
         />
+        -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!4v1655911394730!6m8!1m7!1sCAoSLEFGMVFpcE03QjVpNUlMd2pLSlE5WlpIcTA2bTEtLUNMS0hnS3pZRU9kdmNx!2m2!1d51.4498567!2d-2.6003617!3f50.173941358535345!4f-18.611214170314184!5f0.7820865974627469"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
         <ul>
           <li>
             <h3>Visit our studio at</h3>
@@ -133,7 +145,96 @@
           <li class="contactlink">Email <a href="#">harmony@hugs.com</a></li>
         </ul>
       </section>
+      <section id="team">
+        <h2>Team</h2>
+        <div id="team-container">
+          <div class="profile">
+            <img src="./images/bendover.jpg" alt="Ben Dover" />
+            <h3>Dr Ben Dover</h3>
+            <p>
+              Quisque tempor mauris nec dolor sodales molestie. Maecenas ex
+              enim, efficitur mattis mattis et, dapibus lacinia libero.
+              <br />
+              <br />
+              Morbi pulvinar risus a tempus scelerisque. Pellentesque nec erat
+              dignissim, laoreet nulla a, luctus quam. Sed nec orci efficitur,
+              rhoncus leo id, porttitor diam. In et augue ultricies, suscipit
+              ante vel, euismod purus. Phasellus ut leo sit amet ante semper
+              convallis. Aenean ac placerat elit. Aliquam vitae lorem diam.
+              <br />
+              <br />
+              Vestibulum sollicitudin lorem eu est consequat finibus. Fusce quis
+              sagittis enim. Donec a pellentesque magna. Mauris ante justo,
+              lacinia id augue in, venenatis convallis nisl.
+            </p>
+          </div>
+          <div class="profile">
+            <img src="./images/anyaneeze.jpg" alt="Anya Neeze" />
+            <h3>Anya Neeze</h3>
+            <p>
+              Praesent egestas feugiat tortor, in volutpat mi tempor sed. Aenean
+              scelerisque, lorem et molestie lobortis, sapien metus ultricies
+              tortor, rhoncus dignissim est tellus sed mi. Quisque commodo lacus
+              sapien, porttitor sollicitudin turpis suscipit nec. Pellentesque
+              maximus tellus turpis. In iaculis quis nunc vel dapibus.
+              <br />
+              <br />
+              Curabitur sem massa, aliquam quis laoreet a, bibendum id sem.
+              Suspendisse ullamcorper et odio eget sollicitudin. Suspendisse id
+              mollis nibh. Donec id ante finibus, viverra massa sed, lacinia
+              est. Proin blandit vel magna a hendrerit. Donec eget arcu gravida,
+              facilisis ligula nec, aliquet nibh. Quisque condimentum hendrerit
+              nulla, a sagittis lectus pellentesque eu.
+            </p>
+          </div>
+          <div class="profile">
+            <img src="./images/ivanatinkle.jpg" alt="Ivana Tinkle" />
+            <h3>Ivana Tinkle</h3>
+            <p>
+              Morbi porta elit nulla, sollicitudin accumsan nibh convallis non.
+              <br /><br />
+              In bibendum ut ligula eu pretium. Nullam vel ultricies ligula, a
+              finibus tellus. Donec feugiat sem arcu, non dignissim dolor
+              sodales sed. Proin viverra est sed ante feugiat cursus. Sed
+              placerat ipsum sem, ut varius turpis euismod vel. Class aptent
+              taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+              <br /><br />
+              Aenean venenatis ligula sed eros placerat, at rutrum tellus
+              commodo. Nam a molestie erat, a egestas erat. Sed vitae
+              sollicitudin dui, in viverra elit. Etiam tincidunt eu nunc quis
+              dignissim. Curabitur condimentum ipsum ultricies diam volutpat
+              maximus. Cras gravida, ipsum vitae mattis rutrum, elit leo mattis
+              ante, et bibendum neque mi id libero. Donec quis molestie ligula.
+            </p>
+          </div>
+          <div class="profile">
+            <img src="./images/annieposition.jpg" alt="Annie Position" />
+            <h3>Annie Position</h3>
+            <p>
+              Vivamus semper tempor velit, ut egestas erat tincidunt in.
+              Phasellus convallis, ante id vestibulum maximus, lectus metus
+              pellentesque lectus, condimentum vehicula massa libero a tellus.
+              Pellentesque laoreet lorem eros, fringilla facilisis urna varius
+              eget. Nullam in dapibus nisi, pulvinar molestie dui. Quisque
+              lectus nisl, faucibus vitae condimentum at, placerat vitae justo.
+              <br /><br />
+              Nulla malesuada, felis quis ornare rhoncus, est urna cursus massa,
+              at dictum tortor mauris ac urna. Nam efficitur faucibus leo, ac
+              feugiat sem sodales vel. Vestibulum vel aliquam metus. Curabitur
+              purus turpis, scelerisque molestie enim dignissim, pulvinar
+              posuere nunc. Interdum et malesuada fames ac ante ipsum primis in
+              faucibus. Pellentesque quis neque vestibulum, molestie elit sit
+              amet, viverra sapien. In non tincidunt lectus, vel tincidunt
+              purus. Quisque eget suscipit nisl, tempus viverra massa.
+              <br /><br />
+              Suspendisse ut blandit diam, non dignissim nibh. Donec facilisis
+              scelerisque nisi, et pretium nulla consectetur non.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>&#169; AdrianWeb</footer>
+    <footer>&#169; AdrianWeb | Images by Unsplash</footer>
   </body>
 </html>
