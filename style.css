@@ -494,7 +494,7 @@ footer {
     display: none;
   }
 
-  #services ul li {
-    width: 100%;
+  #services a {
+    font-size: 3vw;
   }
 }
